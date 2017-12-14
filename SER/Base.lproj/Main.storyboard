@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CsA-PE-JCO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Yes Ser-->
+        <scene sceneID="9Bo-uU-LMN">
+            <objects>
+                <viewController id="ZFb-dI-VNr" customClass="ViewController" customModule="SER" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eZd-pe-FzU"/>
+                        <viewControllerLayoutGuide type="bottom" id="FdA-50-6qS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdP-7g-ZbO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="At9-6j-fQB" userLabel="recordButton">
+                                <rect key="frame" x="16" y="432" width="165" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="ccY-Nh-QfD"/>
+                                    <constraint firstAttribute="height" constant="100" id="eTY-GG-Ks7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <state key="normal" title="녹음">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQc-59-JQq" userLabel="playButton">
+                                <rect key="frame" x="194" y="432" width="165" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <state key="normal" title="재생">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="ZFb-dI-VNr" eventType="touchUpInside" id="Usk-up-XR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3m-NA-J7h" userLabel="filelistButton">
+                                <rect key="frame" x="16" y="547" width="165" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WBy-Ch-I9t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <state key="normal" title="파일">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="COb-tC-gub" kind="show" id="nFI-Rc-YO7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-S9-UQP" userLabel="serButton">
+                                <rect key="frame" x="194" y="547" width="165" height="100"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <state key="normal" title="감정 인식">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ser:" destination="ZFb-dI-VNr" eventType="touchUpInside" id="pbP-yb-MYL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="녹음버튼을 누르시거나 파일을 선택하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0U-7U-eO6">
+                                <rect key="frame" x="32" y="331" width="309" height="34"/>
+                                <color key="backgroundColor" red="0.53098688469999999" green="0.3139814648" blue="0.20313441430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Jiz-HI-ahU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy-happy-face" translatesAutoresizingMaskIntoConstraints="NO" id="BCM-ri-TZN">
+                                <rect key="frame" x="66" y="92" width="240" height="199"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="lh6-S9-UQP" firstAttribute="baseline" secondItem="b3m-NA-J7h" secondAttribute="firstBaseline" id="2s2-A2-9VZ"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="leading" secondItem="b3m-NA-J7h" secondAttribute="leading" id="3NG-5l-wWs"/>
+                            <constraint firstItem="b3m-NA-J7h" firstAttribute="top" secondItem="At9-6j-fQB" secondAttribute="bottom" constant="15" id="3nf-Cr-j86"/>
+                            <constraint firstItem="b3m-NA-J7h" firstAttribute="baseline" secondItem="lh6-S9-UQP" secondAttribute="firstBaseline" id="DGe-eK-eED"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="leading" secondItem="tdP-7g-ZbO" secondAttribute="leadingMargin" id="NeT-Id-M1X"/>
+                            <constraint firstItem="BCM-ri-TZN" firstAttribute="top" secondItem="eZd-pe-FzU" secondAttribute="bottom" constant="28" id="OB0-ez-KBf"/>
+                            <constraint firstItem="lQc-59-JQq" firstAttribute="leading" secondItem="At9-6j-fQB" secondAttribute="trailing" constant="13" id="Qju-1H-GDb"/>
+                            <constraint firstItem="lQc-59-JQq" firstAttribute="trailing" secondItem="lh6-S9-UQP" secondAttribute="trailing" id="a0c-z9-2uE"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="top" secondItem="lQc-59-JQq" secondAttribute="top" id="fDm-UZ-QQ0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="j0U-7U-eO6" secondAttribute="trailing" constant="18" id="fZd-8R-yOL"/>
+                            <constraint firstItem="BCM-ri-TZN" firstAttribute="leading" secondItem="tdP-7g-ZbO" secondAttribute="leadingMargin" constant="50" id="kZl-tO-xgf"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="trailing" secondItem="b3m-NA-J7h" secondAttribute="trailing" id="mPz-Wy-haP"/>
+                            <constraint firstItem="j0U-7U-eO6" firstAttribute="top" secondItem="BCM-ri-TZN" secondAttribute="bottom" constant="40" id="nN7-J3-IGL"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="top" secondItem="j0U-7U-eO6" secondAttribute="bottom" constant="67" id="phg-ei-ugr"/>
+                            <constraint firstItem="At9-6j-fQB" firstAttribute="baseline" secondItem="lQc-59-JQq" secondAttribute="firstBaseline" id="q4P-mh-N0I"/>
+                            <constraint firstItem="lQc-59-JQq" firstAttribute="trailing" secondItem="tdP-7g-ZbO" secondAttribute="trailingMargin" id="rfK-Jl-SIq"/>
+                            <constraint firstItem="BCM-ri-TZN" firstAttribute="centerX" secondItem="j0U-7U-eO6" secondAttribute="centerX" id="trZ-HH-u2o"/>
+                            <constraint firstItem="lQc-59-JQq" firstAttribute="baseline" secondItem="At9-6j-fQB" secondAttribute="firstBaseline" id="yH0-Rb-5RT"/>
+                            <constraint firstItem="lQc-59-JQq" firstAttribute="leading" secondItem="lh6-S9-UQP" secondAttribute="leading" id="yUB-M7-aNo"/>
+                            <constraint firstItem="j0U-7U-eO6" firstAttribute="leading" secondItem="tdP-7g-ZbO" secondAttribute="leadingMargin" constant="16" id="yee-6H-Q8k"/>
+                            <constraint firstAttribute="bottom" secondItem="b3m-NA-J7h" secondAttribute="bottom" constant="20" symbolic="YES" id="zOt-YX-bLI"/>
+                            <constraint firstItem="b3m-NA-J7h" firstAttribute="top" secondItem="lh6-S9-UQP" secondAttribute="top" id="zvr-oH-8j2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yes Ser" id="SyE-lB-xBo"/>
+                    <connections>
+                        <outlet property="filelistButton" destination="b3m-NA-J7h" id="0Mp-dK-otl"/>
+                        <outlet property="helpLabel" destination="j0U-7U-eO6" id="EvL-ga-bnd"/>
+                        <outlet property="playButton" destination="lQc-59-JQq" id="A6y-sC-0GR"/>
+                        <outlet property="recordButton" destination="At9-6j-fQB" id="9op-2G-psY"/>
+                        <outlet property="serButton" destination="lh6-S9-UQP" id="MdI-4n-fgz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8l-la-c4P" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3530.4000000000001" y="135.38230884557723"/>
+        </scene>
+        <!--Ser View Controller-->
+        <scene sceneID="bDH-XD-UBy">
+            <objects>
+                <viewController storyboardIdentifier="serViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eu4-aS-7Yj" customClass="SerViewController" customModule="SER" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PoM-ID-R9U"/>
+                        <viewControllerLayoutGuide type="bottom" id="1e6-nJ-K3I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rhr-Qu-edU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jna-yg-P5N">
+                                <rect key="frame" x="92" y="511" width="192" height="112"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="6F7-eC-edL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="32"/>
+                                <state key="normal" title="홈으로">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="close" destination="Eu4-aS-7Yj" eventType="touchUpInside" id="YhC-f0-hGG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-rt-EBB">
+                                <rect key="frame" x="50" y="401" width="275" height="37"/>
+                                <color key="backgroundColor" red="0.53098688469999999" green="0.3139814648" blue="0.20313441430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="8Av-3o-4HC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy-happy-face" translatesAutoresizingMaskIntoConstraints="NO" id="4oX-BI-ICj">
+                                <rect key="frame" x="66" y="92" width="240" height="199"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="199" id="ziP-GZ-ukf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="1e6-nJ-K3I" firstAttribute="top" secondItem="Jna-yg-P5N" secondAttribute="bottom" constant="44" id="32z-19-GET"/>
+                            <constraint firstItem="HnR-rt-EBB" firstAttribute="centerX" secondItem="Jna-yg-P5N" secondAttribute="centerX" id="93k-92-OiA"/>
+                            <constraint firstItem="Jna-yg-P5N" firstAttribute="leading" secondItem="Rhr-Qu-edU" secondAttribute="leadingMargin" constant="76" id="FSm-WI-UOT"/>
+                            <constraint firstItem="Jna-yg-P5N" firstAttribute="top" secondItem="HnR-rt-EBB" secondAttribute="bottom" constant="73" id="PF8-EI-Eg1"/>
+                            <constraint firstItem="HnR-rt-EBB" firstAttribute="leading" secondItem="Rhr-Qu-edU" secondAttribute="leadingMargin" constant="96" id="gkJ-Mg-gwq"/>
+                            <constraint firstItem="4oX-BI-ICj" firstAttribute="leading" secondItem="Rhr-Qu-edU" secondAttribute="leadingMargin" constant="50" id="q0X-Jr-rdI"/>
+                            <constraint firstItem="Jna-yg-P5N" firstAttribute="centerX" secondItem="Rhr-Qu-edU" secondAttribute="centerX" id="stg-6X-J1s"/>
+                            <constraint firstItem="4oX-BI-ICj" firstAttribute="top" secondItem="PoM-ID-R9U" secondAttribute="bottom" constant="72" id="uz0-G8-4Tr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4oX-BI-ICj" secondAttribute="trailing" constant="53" id="vXI-ul-VIp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emotionImg" destination="4oX-BI-ICj" id="FE4-Jm-QGd"/>
+                        <outlet property="emotionLabel" destination="HnR-rt-EBB" id="FVe-4x-Dyr"/>
+                        <outlet property="homeButton" destination="Jna-yg-P5N" id="e4v-UJ-AUR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sl3-nS-A03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3517.5999999999999" y="823.53823088455783"/>
+        </scene>
+        <!--Filelist-->
+        <scene sceneID="vN7-qQ-Gbh">
+            <objects>
+                <tableViewController id="COb-tC-gub" customClass="FilelistViewController" customModule="SER" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZbV-5D-c1D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexColor" red="0.16132830510000001" green="0.45950048580000002" blue="0.3135535425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.16132830510000001" green="0.45950048580000002" blue="0.3135535425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.16132830510000001" green="0.45950048580000002" blue="0.3135535425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilelistItem" id="iTl-Vv-PEg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iTl-Vv-PEg" id="wP4-pM-cSe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-sm-pQQ">
+                                            <rect key="frame" x="352" y="14" width="15" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNX-vh-n1d">
+                                            <rect key="frame" x="18" y="13" width="315" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="COb-tC-gub" id="Fi3-Ed-5ar"/>
+                            <outlet property="delegate" destination="COb-tC-gub" id="MWb-hi-ob4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Filelist" id="zwR-5K-dzE">
+                        <barButtonItem key="rightBarButtonItem" title="Choose" id="rkx-y5-TN4">
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <connections>
+                                <action selector="choose" destination="COb-tC-gub" id="g1u-4R-hgl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ah-PC-dQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4416.8000000000002" y="134.48275862068968"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="gy0-ml-aQW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CsA-PE-JCO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5TZ-yV-lZd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mbe-Jo-kJM">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZFb-dI-VNr" kind="relationship" relationship="rootViewController" id="SVx-DD-pPC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvy-NJ-kTl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2591.1999999999998" y="135.38230884557723"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="boy-happy-face" width="531" height="486"/>
+    </resources>
+</document>
