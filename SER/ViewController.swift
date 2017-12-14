@@ -60,6 +60,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate,AVAudioRecorderDele
         } catch {
             // failed to record!
         }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -195,7 +196,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate,AVAudioRecorderDele
             pt = pt + 160
             centroid = pt + half_win
         }
-        //print(y)
+        print(y)
         guard let mlMultiArray = try? MLMultiArray(shape:[40,12], dataType:MLMultiArrayDataType.double) else {
             fatalError("Unexpected runtime error. MLMultiArray")
         }
